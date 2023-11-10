@@ -53,6 +53,9 @@ cv2.rectangle(img,(0,0),(255,350),(0,0,255),2)
 # now filling the image
 cv2.rectangle(img,(0,0),(255,350),(0,0,255),cv2.FILLED)
 
+# now creating the circle
+cv2.circle(img,(400,50),30,(255,0,0),5)
+
 
 cv2.imshow("img_window",img)
 
