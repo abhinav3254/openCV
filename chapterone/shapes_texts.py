@@ -50,6 +50,10 @@ cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
 # 2 is the thickness
 cv2.rectangle(img,(0,0),(255,350),(0,0,255),2)
 
+# now filling the image
+cv2.rectangle(img,(0,0),(255,350),(0,0,255),cv2.FILLED)
+
+
 cv2.imshow("img_window",img)
 
 cv2.waitKey(0)
