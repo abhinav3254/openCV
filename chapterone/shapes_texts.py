@@ -21,6 +21,8 @@ cv2.imshow("image_window",img)
 
 '''
 
+
+'''
 # now we going to create lines
 img = np.zeros((256,256,3))
 
@@ -34,6 +36,19 @@ img = np.zeros((256,256,3))
 # instead of specific lenght and height we are going to make it start it from start and end it to the end
 # img.shape[1] --> height ,img.shape[0]--> width)
 cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
+
+cv2.imshow("img_window",img)
+
+'''
+
+# creating an image
+img = np.zeros((512,512,3))
+cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
+# here we are drawing the rectange and (0,0) is the starting index
+# (255,350) --> is the ending index
+# (0,0,255) is the color code
+# 2 is the thickness
+cv2.rectangle(img,(0,0),(255,350),(0,0,255),2)
 
 cv2.imshow("img_window",img)
 
