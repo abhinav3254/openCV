@@ -32,6 +32,7 @@ while True:
 
 '''
 
+'''
 # this is for webcam
 
 # here we have one web cam in our system so we are using 0
@@ -49,3 +50,5 @@ while True:
     cv2.imshow("video_window",img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+        
+'''
