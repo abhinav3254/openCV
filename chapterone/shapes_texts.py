@@ -29,7 +29,11 @@ img = np.zeros((256,256,3))
 # (0,0) is the starting point from where we are going to start
 # (200,200) is the ending point upto which we are going to end
 # and (0,255,0) is the color code for the line
-cv2.line(img,(0,0),(200,200),(0,255,0),3)
+# cv2.line(img,(0,0),(200,200),(0,255,0),3)
+
+# instead of specific lenght and height we are going to make it start it from start and end it to the end
+# img.shape[1] --> height ,img.shape[0]--> width)
+cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
 
 cv2.imshow("img_window",img)
 
