@@ -56,6 +56,9 @@ cv2.rectangle(img,(0,0),(255,350),(0,0,255),cv2.FILLED)
 # now creating the circle
 cv2.circle(img,(400,50),30,(255,0,0),5)
 
+# creating the text on the image
+cv2.putText(img,"I am Abhinav Jha",(100,200),cv2.FONT_HERSHEY_SIMPLEX,1,(0,150,0),2)
+
 
 cv2.imshow("img_window",img)
 
