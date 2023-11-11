@@ -23,9 +23,13 @@ while True:
                 # this id 8 is for forefinger
                 if id == 8:
                     cv2.circle(img=image, center=(x, y), radius=8, color=(0, 255, 255), thickness=3)
+                    x1 = x
+                    y1 = y
                 # thumb finger
                 if id == 4:
                     cv2.circle(img=image, center=(x, y), radius=8, color=(0, 0, 255), thickness=3)
+                    x2 = x
+                    y2 = y
 
     cv2.imshow("live_cam", image)
 
