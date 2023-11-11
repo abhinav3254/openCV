@@ -1,5 +1,6 @@
 import cv2
 import mediapipe as mp
+import pyautogui
 
 x1 = y1 = x2 = y2 = 0
 
@@ -31,8 +32,16 @@ while True:
                     x2 = x
                     y2 = y
 
-                # now drawing the line between the two fingers
-                cv2.line(image,(x1,y1),(x2,y2),(0,255,0),5)
+        # we are going to calculate the volume according the line length so we are going to calculate the length of the line
+        distance = ((x2-x1)**2+(y2-y1)**2)**(0.5)//4
+        # now drawing the line between the two fingers
+        cv2.line(image,(x1,y1),(x2,y2),(0,255,0),5)
+        if distance > 50:
+            pyautogui.press("volumeup")
+        else:
+            pyautogui.press("volumedown")
+
+
 
     cv2.imshow("live_cam", image)
 
