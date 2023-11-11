@@ -31,6 +31,9 @@ while True:
                     x2 = x
                     y2 = y
 
+                # now drawing the line between the two fingers
+                cv2.line(image,(x1,y1),(x2,y2),(0,255,0),5)
+
     cv2.imshow("live_cam", image)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
